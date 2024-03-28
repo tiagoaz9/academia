@@ -1,0 +1,2 @@
+git config --global user.name tiagoaz9
+git config --global user.email tiago.trindade.az9@gmail.com

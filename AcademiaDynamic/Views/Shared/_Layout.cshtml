@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Gym Template">
+    <meta name="keywords" content="Gym, unica, creative, html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DYNAMIC ACADEMIA - @ViewData["Title"]</title>
+
+    <link rel="shortcut icon" href="~/img/logo" type="image/x-icon">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald:300,400,500,600,700&display=swap" rel="stylesheet">
+
+    <!-- Css Styles -->
+    <link rel="stylesheet" href="~/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/flaticon.css" type="text/css">
+    <link rel="stylesheet" href="~/css/owl.carousel.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/barfiller.css" type="text/css">
+    <link rel="stylesheet" href="~/css/magnific-popup.css" type="text/css">
+    <link rel="stylesheet" href="~/css/slicknav.min.css" type="text/css">
+    <link rel="stylesheet" href="~/css/style.css" type="text/css">
+</head>
+
+<body>
+    <!-- Page Preloder -->
+    <div id="preloder">
+        <div class="loader"></div>
+    </div>
+
+    <!-- Início da seção do menu Offcanvas -->
+    <div class="offcanvas-menu-overlay"></div>
+    <div class="offcanvas-menu-wrapper">
+        <div class="canvas-close">
+            <i class="fa fa-close"></i>
+        </div>
+        <div class="canvas-search search-switch"></div>
+        <nav class="canvas-menu mobile-menu">
+            <ul>
+                <li class='@ViewData["Title"] == "Início" ? "active" : ""'>
+                    <a asp-action="Index">Inicio</a>
+                </li>
+                <li class='@ViewData["Title"] == "Sobre Nós" ? "active" : ""'>
+                    <a asp-action="SobreNos">Sobre-Nós</a>
+                </li>
+                <li class='@ViewData["Title"] == "Serviços" ? "active" : ""'>
+                    <a asp-action="Servicos">Serviços</a>
+                </li>
+                <li class='@ViewData["Title"] == "Loja" ? "active" : ""'>
+                    <a asp-action="Loja">Loja</a>
+                </li>
+            </ul>
+        </nav>
+        <div id="mobile-menu-wrap"></div>
+        <div class="canvas-social">
+            <a href="https://www.facebook.com/Dynamic.Academia?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+            <a href="https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0"><i
+                    class="fa fa-whatsapp"></i></a>
+            <a href="https://www.instagram.com/dynamic.marielle?igsh=aTh6Z2hsaTJzcmh "><i
+                    class="fa fa-instagram"></i></a>
+        </div>
+    </div>
+    <!-- Fim da seção do menu Offcanvas -->
+
+    <!-- Início da seção do cabeçalho -->
+    <header class="header-section">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-3">
+                    <div class="logo">
+                        <a asp-action="Index">
+                            <img src="~/img/logo.png" alt="">
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <nav class="nav-menu">
+                        <ul>
+                            <li class='@ViewData["Title"] == "Início" ? "active" : ""'>
+                                <a asp-action="Index">Inicio</a>
+                            </li>
+                            <li class='@ViewData["Title"] == "Sobre Nós" ? "active" : ""'>
+                                <a asp-action="SobreNos">Sobre-Nós</a>
+                            </li>
+                            <li class='@ViewData["Title"] == "Serviços" ? "active" : ""'>
+                                <a asp-action="Servicos">Serviços</a>
+                            </li>
+                            <li class='@ViewData["Title"] == "Loja" ? "active" : ""'>
+                                <a asp-action="Loja">Loja</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-lg-3">
+                    <div class="top-option">
+                        <div class="to-search search-switch"></div>
+                        <div class="to-social">
+                            <a href="https://www.facebook.com/Dynamic.Academia?mibextid=ZbWKwL"><i
+                                    class="fa fa-facebook"></i></a>
+                            <a
+                                href="https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0"><i
+                                    class="fa fa-whatsapp"></i></a>
+                            <a href="https://www.instagram.com/dynamic.marielle?igsh=aTh6Z2hsaTJzcmh "><i
+                                    class="fa fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="canvas-open">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </header>
+    <!-- Fim do cabeçalho -->
+
+    @RenderBody()
+
+    <!-- Início da seção do rodapé -->
+    <section class="footer-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="fs-about">
+                        <div class="fa-logo">
+                            <a href="#"><img src="~/img/logo.png" alt=""></a>
+                        </div>
+                        <p></p>
+                        <div class="fa-social">
+                            <a href="https://www.facebook.com/Dynamic.Academia?mibextid=ZbWKwL"><i
+                                    class="fa fa-facebook"></i></a>
+                            <a
+                                href="https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0"><i
+                                    class="fa fa-whatsapp"></i></a>
+                            <a href="https://www.instagram.com/dynamic.marielle?igsh=aTh6Z2hsaTJzcmh "><i
+                                    class="fa fa-instagram"></i></a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-12 text-center">
+                <div class="copyright-text">
+                    <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        Copyright &copy;
+                        <script>document.write(new Date().getFullYear());</script> All rights reserved | This template
+                        is made with <i class="fa fa-heart" aria-hidden="true"></i> by <a href="https://colorlib.com"
+                            target="_blank">Colorlib</a>
+                        <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    <!-- Fim da seção do rodapé -->
+
+    <!-- Modelo de pesquisa Iniciar -->
+    <div class="search-model">
+        <div class="h-100 d-flex align-items-center justify-content-center">
+            <div class="search-close-switch">+</div>
+            <form class="search-model-form">
+                <input type="text" id="search-input" placeholder="Search here.....">
+            </form>
+        </div>
+    </div>
+    <!-- Fim do modelo de pesquisa -->
+
+    <!-- Plug-ins Js -->
+    <script src="~/js/jquery-3.3.1.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script>
+    <script src="~/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/js/masonry.pkgd.min.js"></script>
+    <script src="~/js/jquery.barfiller.js"></script>
+    <script src="~/js/jquery.slicknav.js"></script>
+    <script src="~/js/owl.carousel.min.js"></script>
+    <script src="~/js/main.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>
