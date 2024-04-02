@@ -1,0 +1,126 @@
+@{
+    ViewData["Title"] = "Loja";
+}
+
+<section class="breadcrumb-section set-bg" data-setbg="../img/breadcrumb-bg.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <div class="breadcrumb-text">
+                        <h2>Nossos Produtos</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Breadcrumb Section End -->
+
+    <!-- Início da seção de aulas -->
+    <section class="classes-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="section-title">
+                        <span>Nossos Produtos</span>
+                        <h2>O QUE PODEMOS OFERERCER</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="produtos">
+        <div class="produto">
+            <img src="~/img/produtos/produto-1.png" alt="">
+            <h3 class="h3l">Creatina</h3>
+            <p class="pl">Por R$ 80,99</p>
+            <button class="comprar-btn" onclick="comprarProduto('https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0')">COMPRAR</button>
+
+        </div>
+    
+        <div class="produto">
+            <img src="~/img/produtos/produto-2.png" alt="">
+            <h3 class="h3l">Whey Protein</h3>
+            <p class="pl">Por R$ 80,99</p>
+            <button class="comprar-btn" onclick="comprarProduto('https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0')">COMPRAR</button>
+        </div>
+    
+        <div class="produto">
+            <img src="~/img/produtos/produto-3.png" alt="Hiper Calórico">
+            <h3 class="h3l">Hiper Calórico</h3>
+            <p class="pl">Por R$ 80,99</p>
+            <button class="comprar-btn" onclick="comprarProduto('https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0')">COMPRAR</button>
+        </div>
+    
+        <div class="produto">
+            <img src="~/img/produtos/produto-4.png" alt="Pré-Treino">
+            <h3 class="h3l">Pré-Treino</h3>
+            <p class="pl">Por R$ 80,99</p>
+            <button class="comprar-btn" onclick="comprarProduto('https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0')">COMPRAR</button>        </div>
+    
+
+    </section>
+
+    <section class="produtos">
+        <div class="produto">
+            <img src="~/img/produtos/produto-5.png" alt="camiseta">
+            <h3 class="h3l">Camiseta</h3>
+            <p class="pl">Por R$ 80,99</p>
+            <button class="comprar-btn" onclick="comprarProduto('https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0')">COMPRAR</button>        </div>
+    
+        <div class="produto">
+            <img src="~/img/produtos/produto-12.png" alt="">
+            <h3 class="h3l">Whey Protein</h3>
+            <p class="pl">Por R$ 80,99</p>
+            <button class="comprar-btn" onclick="comprarProduto('https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0')">COMPRAR</button>        </div>
+    
+        <div class="produto">
+            <img src="~/img/produtos/produto-12.png" alt="Hiper Calórico">
+            <h3 class="h3l">Hiper Calórico</h3>
+            <p class="pl">Por R$ 80,99</p>
+            <button class="comprar-btn" onclick="comprarProduto('https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0')">COMPRAR</button>        </div>
+    
+        <div class="produto">
+            <img src="~/img/produtos/produto-12.png" alt="Pré-Treino">
+            <h3 class="h3l">Pré-Treino</h3>
+            <p class="pl">Por R$ 80,99</p>
+            <button class="comprar-btn" onclick="comprarProduto('https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0')">COMPRAR</button>        </div>
+
+    </section>
+
+    <script>
+        function comprarProduto(numero) {
+            window.location.href = numero;
+        }
+    </script>
+
+<!-- Fim da Seção EscolhaUs -->
+
+    <!-- Início da seção Entre em Contato -->
+    <div class="gettouch-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-map-marker"></i>
+                        <p>Rua: Dom Carlos, Igaraçu Do Tietê/SP<br/> N:18</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text">
+                        <i class="fa fa-mobile"></i>
+                        <ul>
+                            <li>125-711-811</li>
+                            <li>125-668-886</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="gt-text email">
+                        <i class="fa fa-envelope"></i>
+                        <p>Support.gymcenter@gmail.com</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
