@@ -1076,51 +1076,111 @@ Seção Herói
 /*---------------------
     Rodapé
 -----------------------*/
-.rodape {
-	background-color: black;
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	color: white;
-	padding: 20px;
-  }
+.footer-section {
+	background: #000000;
+	padding-top: 50px;
+}
 
-  .contatos {
-	text-align: left;
-  }
+.fs-about {
+	margin-bottom: 30px;
+}
 
-  .contatos h1 {
-	margin-bottom: 10px;
-  }
+.fs-about .fa-logo {
+	margin-bottom: 30px;
+}
 
-  .contatos a {
-	display: block;
-	color: white;
-	text-decoration: none;
-	margin-bottom: 5px;
-  }
-  
-  .linha-vertical {
-	height: 100px;
-	border-left: 2px solid white;
-  }
-  
-  .endereco {
-	text-align: right;
-  }
-  
-  /* Corrigindo a cor do texto "DYNAMIC ACADEMIA" para verde escuro */
-  .endereco h1:first-child {
-	margin-bottom: 5px;
-	color: rgb(48, 238, 48);
-  }
-  
-  .endereco p:last-child {
-	margin-bottom: 0;
-  }
+.fs-about .fa-logo a {
+
+	display: inline-block;
+	width: 300px;
+    height: 100px;
+}
+
+.fs-about p {
+	line-height: 26px;
+	color: #c4c4c4;
+}
+
+.fs-about .fa-social a {
+	font-size: 14px;
+	color: #c4c4c4;
+	margin-right: 10px;
+}
+
+.fs-about .fa-social a:last-child {
+	margin-right: 0;
+}
+
+.fs-widget {
+	margin-bottom: 30px;
+}
+
+.fs-widget h4 {
+	color: #ffffff;
+	font-weight: 600;
+	margin-bottom: 18px;
+}
+
+.fs-widget ul li {
+	list-style: none;
+}
+
+.fs-widget ul li a {
+	font-size: 14px;
+	color: #c4c4c4;
+	line-height: 30px;
+}
+
+.fs-widget .fw-recent {
+	margin-bottom: 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px solid #1a1a1a;
+}
+
+.fs-widget .fw-recent:last-child {
+	padding-bottom: 0;
+	border: none;
+}
+
+.fs-widget .fw-recent h6 {
+	margin-bottom: 6px;
+}
+
+.fs-widget .fw-recent h6 a {
+	color: #c4c4c4;
+	letter-spacing: 0.5px;
+}
+
+.fs-widget .fw-recent ul li {
+	font-size: 12px;
+	color: #4d4d4d;
+	display: inline-block;
+	margin-right: 25px;
+	position: relative;
+}
+
+.fs-widget .fw-recent ul li:last-child:after {
+	display: none;
+}
+
+.fs-widget .fw-recent ul li:after {
+	position: absolute;
+	right: -16px;
+	top: 0;
+	content: "|";
+}
+
+.copyright-text {
+	font-size: 14px;
+	color: #c4c4c4;
+	letter-spacing: 0.5px;
+	border-top: 1px solid #1a1a1a;
+	padding: 25px 0;
+	margin-top: 15px;
+}
 
 
-/*.copyright-text {
+.copyright-text {
 	font-size: 14px;
 	color: #c4c4c4;
 	letter-spacing: 0.5px;
@@ -1132,7 +1192,7 @@ Seção Herói
 .copyright-text a,
 .copyright-text i {
 	color: #408f1c;
-}*/
+}
 
 /* ----------------------------------- Other Pages Styles ----------------------------------- */
 
