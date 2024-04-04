@@ -542,13 +542,14 @@ Seção Herói
 }
 
 .hs-slider .hs-item {
-	height: 1040px;
+	height: 820px;
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
 	-ms-flex-line-pack: center;
 	align-content: center;
 	padding-top: 355px;
+	mask-image: linear-gradient(to boton,#000 50%, rgba(0,0,0 0.01) 90%);
 }
 
 .hs-slider .hs-item .hi-text span {
