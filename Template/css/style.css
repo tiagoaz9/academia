@@ -1092,7 +1092,7 @@ Seção Herói
 .fs-about .fa-logo a {
 
 	display: inline-block;
-	width: 200px;
+	width: 300px;
     height: 100px;
 }
 
@@ -1179,10 +1179,7 @@ Seção Herói
 	margin-top: 15px;
 }
 
-.copyright-text a,
-.copyright-text i {
-	color: #408f1c;
-}
+
 
 /* ----------------------------------- Other Pages Styles ----------------------------------- */
 
