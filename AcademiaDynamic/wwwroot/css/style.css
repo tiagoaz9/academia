@@ -1077,122 +1077,61 @@ Seção Herói
     Rodapé
 -----------------------*/
 .footer-section {
-	background: #000000;
-	padding-top: 50px;
+    background: #000000;
+    padding: 50px 0;
 }
 
 .fs-about {
-	margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 
-.fs-about .fa-logo {
-	margin-bottom: 30px;
+.fa-logo {
+    margin-bottom: 10px;
 }
 
-.fs-about .fa-logo a {
-
-	display: inline-block;
-	width: 300px;
-    height: 100px;
+.fa-logo img {
+    max-width: 200px;
 }
 
 .fs-about p {
-	line-height: 26px;
-	color: #c4c4c4;
+    color: #c4c4c4;
 }
 
-.fs-about .fa-social a {
-	font-size: 14px;
-	color: #c4c4c4;
-	margin-right: 10px;
+.contact-info p {
+    color: #ffffff;
+    margin-bottom: 15px;
 }
 
-.fs-about .fa-social a:last-child {
-	margin-right: 0;
+.social-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.fs-widget {
-	margin-bottom: 30px;
+.social-links li {
+    display: inline-block;
+    margin-right: 10px;
 }
 
-.fs-widget h4 {
-	color: #ffffff;
-	font-weight: 600;
-	margin-bottom: 18px;
+.social-links li:last-child {
+    margin-right: 0;
 }
 
-.fs-widget ul li {
-	list-style: none;
+.social-links a {
+    color: #c4c4c4;
+    font-size: 20px;
 }
 
-.fs-widget ul li a {
-	font-size: 14px;
-	color: #c4c4c4;
-	line-height: 30px;
+.social-links a:hover {
+    color: #ffffff;
 }
 
-.fs-widget .fw-recent {
-	margin-bottom: 20px;
-	padding-bottom: 10px;
-	border-bottom: 1px solid #1a1a1a;
+.vertical-line {
+    border-left: 1px solid #c4c4c4;
+    height: 30px;
+    margin: 0 15px;
 }
 
-.fs-widget .fw-recent:last-child {
-	padding-bottom: 0;
-	border: none;
-}
-
-.fs-widget .fw-recent h6 {
-	margin-bottom: 6px;
-}
-
-.fs-widget .fw-recent h6 a {
-	color: #c4c4c4;
-	letter-spacing: 0.5px;
-}
-
-.fs-widget .fw-recent ul li {
-	font-size: 12px;
-	color: #4d4d4d;
-	display: inline-block;
-	margin-right: 25px;
-	position: relative;
-}
-
-.fs-widget .fw-recent ul li:last-child:after {
-	display: none;
-}
-
-.fs-widget .fw-recent ul li:after {
-	position: absolute;
-	right: -16px;
-	top: 0;
-	content: "|";
-}
-
-.copyright-text {
-	font-size: 14px;
-	color: #c4c4c4;
-	letter-spacing: 0.5px;
-	border-top: 1px solid #1a1a1a;
-	padding: 25px 0;
-	margin-top: 15px;
-}
-
-
-.copyright-text {
-	font-size: 14px;
-	color: #c4c4c4;
-	letter-spacing: 0.5px;
-	border-top: 1px solid #1a1a1a;
-	padding: 25px 0;
-	margin-top: 15px;
-}
-
-.copyright-text a,
-.copyright-text i {
-	color: #408f1c;
-}
 
 /* ----------------------------------- Other Pages Styles ----------------------------------- */
 
