@@ -1078,7 +1078,7 @@ Seção Herói
 -----------------------*/
 .footer-section {
     background: #000000;
-    padding: 50px 0;
+    padding: 40px 0;
 }
 
 .fs-about {
@@ -1128,7 +1128,7 @@ Seção Herói
 
 .vertical-line {
     border-left: 1px solid #c4c4c4;
-    height: 30px;
+    height: 100px;
     margin: 0 15px;
 }
 
