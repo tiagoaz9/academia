@@ -1130,16 +1130,40 @@ Seção Herói
     color: #ffffff;
 }
 
+.vertical-line-container {
+    display: flex;
+    align-items: center; /* Centralizar verticalmente */
+}
+
 .vertical-line {
     border-left: 1px solid #c4c4c4;
     height: 100px;
-    margin: 0 auto; /* Centralizar a linha vertical */
+    margin: 0 auto; /* Centralizar horizontalmente */
+}
+
+.contact-info {
+    margin-top: 20px; /* Adiciona um espaço entre a linha vertical e os detalhes de contato */
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.social-links a {
+    color: #c4c4c4;
+    font-size: 20px;
 }
 
 .social-links a:hover {
-    color: #00FF00; /* Alterar a cor para verde */
+    color: #00FF00; /* Altera a cor para verde */
 }
-
+	
 
 
 /* ----------------------------------- Other Pages Styles ----------------------------------- */
