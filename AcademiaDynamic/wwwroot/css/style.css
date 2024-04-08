@@ -1133,8 +1133,13 @@ Seção Herói
 .vertical-line {
     border-left: 1px solid #c4c4c4;
     height: 100px;
-    margin: 0 15px;
+    margin: 0 auto; /* Centralizar a linha vertical */
 }
+
+.social-links a:hover {
+    color: #00FF00; /* Alterar a cor para verde */
+}
+
 
 
 /* ----------------------------------- Other Pages Styles ----------------------------------- */

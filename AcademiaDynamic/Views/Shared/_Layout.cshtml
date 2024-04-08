@@ -42,13 +42,13 @@
         <nav class="canvas-menu mobile-menu">
             <ul>
                 <li class='@ViewData["Title"] == "Início" ? "active" : ""'>
-                    <a asp-action="Index">Inicio</a>
+                    <a asp-action="Index">Início</a>
                 </li>
                 <li class='@ViewData["Title"] == "Sobre Nós" ? "active" : ""'>
                     <a asp-action="SobreNos">Sobre-Nós</a>
                 </li>
                 <li class='@ViewData["Title"] == "Serviços" ? "active" : ""'>
-                    <a asp-action="Servicos">Serviços</a>
+                    <a asp-action="Serviços">Serviços</a>
                 </li>
                 <li class='@ViewData["Title"] == "Loja" ? "active" : ""'>
                     <a asp-action="Loja">Loja</a>
@@ -126,12 +126,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <div class="fs-about">
+                <div class="fs-about text-center"> <!-- Adicionado a classe text-center -->
                     <div class="fa-logo">
                         <a href="#"><img src="~/img/logo.png" alt=""></a>
                     </div>
 
-                        <li class="vertical-line"></li>
+                    <li class="vertical-line"></li>
 
                     <h4 class="hroda-pe">Endereço: Rua Dom Carlos, 18 - Igaraçu Do Tietê/SP</h4>
                 </div>
@@ -140,12 +140,9 @@
                 <div class="contact-info text-right">
                     <h2 class="hroda-pe">ENTRE EM CONTATO</h2>
                     <ul class="social-links">
-            <a href="https://www.facebook.com/Dynamic.Academia?mibextid=ZbWKwL"><i 
-                    class="fa fa-facebook"></i></a>
-            <a href="https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0"><i
-                    class="fa fa-whatsapp"></i></a>
-            <a href="https://www.instagram.com/dynamic.marielle?igsh=aTh6Z2hsaTJzcmh "><i
-                    class="fa fa-instagram"></i></a>
+                        <a href="https://www.facebook.com/Dynamic.Academia?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
+                        <a href="https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0"><i class="fa fa-whatsapp"></i></a>
+                        <a href="https://www.instagram.com/dynamic.marielle?igsh=aTh6Z2hsaTJzcmh "><i class="fa fa-instagram"></i></a>
                     </ul>
                 </div>
             </div>
@@ -153,20 +150,20 @@
     </div>
 </footer>
 
-    <!-- Fim da seção do rodapé -->
+<!-- Fim da seção do rodapé -->
 
-    <!-- Modelo de pesquisa Iniciar -->
+<!-- Modelo de pesquisa Iniciar -->
     <div class="search-model">
         <div class="h-100 d-flex align-items-center justify-content-center">
-            <div class="search-close-switch">+</div>
+            <div class="search-close-switch"></div>
             <form class="search-model-form">
                 <input type="text" id="search-input" placeholder="Search here.....">
             </form>
         </div>
     </div>
-    <!-- Fim do modelo de pesquisa -->
+<!-- Fim do modelo de pesquisa -->
 
-    <!-- Plug-ins Js -->
+<!-- Plug-ins Js -->
     <script src="~/js/jquery-3.3.1.min.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
     <script src="~/js/jquery.magnific-popup.min.js"></script>
@@ -177,5 +174,4 @@
     <script src="~/js/main.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
-
 </html>
