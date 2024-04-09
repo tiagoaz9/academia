@@ -1169,48 +1169,6 @@ Seção Herói
 /* ----------------------------------- Other Pages Styles ----------------------------------- */
 
 /*---------------------
-  Seção de localização atual
------------------------*/
-
-.breadcrumb-section {
-	height: 500px;
-	padding-top: 230px;
-}
-
-.breadcrumb-text h2 {
-	font-size: 60px;
-	color: #ffffff;
-	font-weight: 600;
-	text-transform: uppercase;
-	margin-bottom: 15px;
-}
-
-.breadcrumb-text .bt-option a {
-	font-size: 18px;
-	color: #ffffff;
-	font-weight: 700;
-	display: inline-block;
-	position: relative;
-	margin-right: 20px;
-}
-
-.breadcrumb-text .bt-option a:after {
-	position: absolute;
-	right: -14px;
-	top: 6px;
-	font-family: "FontAwesome";
-	content: "";
-	font-size: 13px;
-	font-weight: 400;
-}
-
-.breadcrumb-text .bt-option span {
-	font-size: 18px;
-	color: #3ccf02;
-	font-weight: 700;
-}
-
-/*---------------------
   Seção Sobre nós
 -----------------------*/
 
