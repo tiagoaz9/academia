@@ -425,6 +425,7 @@ ol {
 	-o-transition: all 0.3s;
 	transition: all 0.3s;
 }
+
 /* Risco do menu */
 .nav-menu ul li a:after {
 	position: absolute;
@@ -588,7 +589,7 @@ Seção Herói
 }
 
 /*---------------------
-  Seção EscolhaUs
+  Seção Escolha
 -----------------------*/
 
 .choseus-section {
@@ -732,7 +733,7 @@ Seção Herói
 
 .bs-text h2 {
 	font-size: 48px;
-	color: #000000;
+	color: #ffffff;
 	font-weight: 700;
 	text-transform: uppercase;
 	margin-bottom: 25px;
@@ -740,7 +741,7 @@ Seção Herói
 
 .bs-text .bt-tips {
 	font-size: 20px;
-	color: #000000;
+	color: #ffffff;
 	font-weight: 700;
 	text-transform: uppercase;
 	margin-bottom: 45px;
