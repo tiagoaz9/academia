@@ -54,11 +54,10 @@
                 </li>
             </ul>
         </nav>
-        
-            <div id="mobile-menu-wrap"></div>
+
+        <div id="mobile-menu-wrap"></div>
         <div class="canvas-social">
-            <a href="https://www.facebook.com/Dynamic.Academia?mibextid=ZbWKwL"><i 
-                    class="fa fa-facebook"></i></a>
+            <a href="https://www.facebook.com/Dynamic.Academia?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a>
             <a href="https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0"><i
                     class="fa fa-whatsapp"></i></a>
             <a href="https://www.instagram.com/dynamic.marielle?igsh=aTh6Z2hsaTJzcmh "><i
@@ -107,13 +106,12 @@
 
                             <a href="https://www.instagram.com/dynamic.marielle?igsh=aTh6Z2hsaTJzcmh "><i
                                     class="fa fa-instagram"></i></a>
-
-             <div class="canvas-open">
-                <i class="fa fa-bars"></i>
-            </div>                                  
                         </div>
                     </div>
                 </div>
+            </div>
+            <div class="canvas-open">
+                <i class="fa fa-bars"></i>
             </div>
         </div>
     </header>
@@ -122,38 +120,43 @@
     @RenderBody()
 
     <!-- Início da seção do rodapé -->
-<footer class="footer-section">
-    <div class="container">
-        <div class="row align-items-center justify-content-center"> <!-- Adicionado alinhamento vertical e horizontal -->
-            <div class="col-lg-4 text-center">
-                <div class="fs-about">
-                    <div class="fa-logo">
-                        <a href="#"><img src="~/img/logo.png" alt=""></a>
-                        <p class="hroda-pe">Endereço: Rua Dom Carlos, 18 - Igaraçu Do Tietê/SP</p>
+    <footer class="footer-section">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                <!-- Adicionado alinhamento vertical e horizontal -->
+                <div class="col-lg-4 text-center">
+                    <div class="fs-about">
+                        <div class="fa-logo">
+                            <a href="#"><img src="~/img/logo.png" alt=""></a>
+                            <p class="hroda-pe">Endereço: Rua Dom Carlos, 18 - Igaraçu Do Tietê/SP</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="vertical-line-container">
+                        <li class="vertical-line"></li>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="contact-info">
+                        <h2 class="hroda-pe">ENTRE EM CONTATO</h2>
+                        <ul class="social-links">
+                            <li><a href="https://www.facebook.com/Dynamic.Academia?mibextid=ZbWKwL"><i
+                                        class="fa fa-facebook"></i></a></li>
+                            <li><a
+                                    href="https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0"><i
+                                        class="fa fa-whatsapp"></i></a></li>
+                            <li><a href="https://www.instagram.com/dynamic.marielle?igsh=aTh6Z2hsaTJzcmh "><i
+                                        class="fa fa-instagram"></i></a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-            <div class="col-lg-4 text-center">
-                <div class="vertical-line-container">
-                    <li class="vertical-line"></li>
-                </div>
-            </div>
-            <div class="col-lg-4 text-center">
-                <div class="contact-info">
-                    <h2 class="hroda-pe">ENTRE EM CONTATO</h2>
-                    <ul class="social-links">
-                        <li><a href="https://www.facebook.com/Dynamic.Academia?mibextid=ZbWKwL"><i class="fa fa-facebook"></i></a></li>
-                        <li><a href="https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0"><i class="fa fa-whatsapp"></i></a></li>
-                        <li><a href="https://www.instagram.com/dynamic.marielle?igsh=aTh6Z2hsaTJzcmh "><i class="fa fa-instagram"></i></a></li>
-                    </ul>
-                </div>
-            </div>
         </div>
-    </div>
-</footer>
-<!--Fim da seção do rodapé -->
+    </footer>
+    <!--Fim da seção do rodapé -->
 
-<!-- Modelo de pesquisa Iniciar -->
+    <!-- Modelo de pesquisa Iniciar -->
     <div class="search-model">
         <div class="h-100 d-flex align-items-center justify-content-center">
             <div class="search-close-switch"></div>
@@ -162,9 +165,9 @@
             </form>
         </div>
     </div>
-<!-- Fim do modelo de pesquisa -->
+    <!-- Fim do modelo de pesquisa -->
 
-<!-- Plug-ins Js -->
+    <!-- Plug-ins Js -->
     <script src="~/js/jquery-3.3.1.min.js"></script>
     <script src="~/js/bootstrap.min.js"></script>
     <script src="~/js/jquery.magnific-popup.min.js"></script>
@@ -175,4 +178,5 @@
     <script src="~/js/main.js"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>
