@@ -1,20 +1,24 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using AcademiaDynamic.Models;
+using AcademiaDynamic.Data;
 
 namespace AcademiaDynamic.Controllers;
 
 public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
+    private readonly AppDbContext _context;
 
-    public HomeController(ILogger<HomeController> logger)
+    public HomeController(ILogger<HomeController> logger, AppDbContext context)
     {
         _logger = logger;
+        _context = context;
     }
 
     public IActionResult Index()
     {
+        //var aulas = _context.Aulas.ToList();
         return View();
     }
 

@@ -1,7 +1,22 @@
+using AcademiaDynamic.Data;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+var conexao = builder.Configuration.GetConnectionString("Academia");
+builder.Services.AddDbContext<AppDbContext>(options => 
+    options.UseMySql(conexao, ServerVersion.AutoDetect(conexao))
+);
+
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(
+    options => options.SignIn.RequireConfirmedAccount = false
+)
+.AddEntityFrameworkStores<AppDbContext>()
+.AddDefaultTokenProviders();
 
 var app = builder.Build();
 
