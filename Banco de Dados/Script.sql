@@ -26,10 +26,10 @@ CREATE TABLE Aulas (
 	Id INT AUTO_INCREMENT PRIMARY KEY,
     Name VARCHAR(100) NOT NULL,
     Description TEXT,
-    Imagem VARCHAR(200) NOT NULL
+    Image VARCHAR(200) NOT NULL
 );
 
-INSERT INTO Aulas (Name, Description, Imagem) VALUES
+INSERT INTO Aulas (Name, Description, Image) VALUES
 ('Musculação', 'Levantamento de Pesos', '/img/classes/class-1.jpg'),
 ('Funcional', 'Versatilidade Física', '/img/classes/class-2.jpg'),
 ('FitDance', 'Dança Fitness', '/img/classes/class-3.jpg');

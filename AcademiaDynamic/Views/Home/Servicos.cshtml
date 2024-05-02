@@ -1,3 +1,4 @@
+@model ServicoVM
 @{
     ViewData["Title"] = "Serviços";
 }
@@ -27,39 +28,20 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="class-item">
-                        <div class="ci-pic">
-                            <img src="~/img/classes/class-1.jpg" alt="">
-                        </div>
-                        <div class="ci-text">
-                            <span>MUSCULAÇÃO</span>
-                            <h5>LEVANTAMENTO DE PESOS</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="class-item">
-                        <div class="ci-pic">
-                            <img src="~/img/classes/class-2.jpg" alt="">
-                        </div>
-                        <div class="ci-text">
-                            <span>Funcional</span>
-                            <h5>versatilidade física</h5>
+                @foreach (var aula in Model.Aulas)
+                {
+                    <div class="col-lg-4 col-md-6">
+                        <div class="class-item">
+                            <div class="ci-pic">
+                                <img src="@aula.Image" alt="">
+                            </div>
+                            <div class="ci-text">
+                                <span>@aula.Name</span>
+                                <h5>@aula.Description</h5>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="class-item">
-                        <div class="ci-pic">
-                            <img src="~/img/classes/class-3.jpg" alt="">
-                        </div>
-                        <div class="ci-text">
-                            <span>FITDANCE</span>
-                            <h5>DANÇA fitness</h5>
-                         </div>
-                    </div>
-                </div>
+                }
             </div>
         </div>
     </div>
@@ -140,37 +122,20 @@
             </div>
         </div>
         <div class="row justify-content-center">
+            @foreach (var plano in Model.Planos)
+            {
             <div class="col-lg-4 col-md-8">
                 <div class="ps-item">
-                    <h3>Mensalidade</h3>
+                    <h3>@plano.Name</h3>
                     <div class="pi-price">
-                        <h2>R$ 90,00</h2>
+                        <h2>@plano.Price</h2>
                     </div>
 
                     <a href="https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0" 
                     class="primary-btn pricing-btn">INSCREVA-SE AGORA</a>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-8">
-                <div class="ps-item">
-                    <h3>Gympass</h3>
-                    <div class="pi-price">
-                        <h2>R$ 49,90</h2>
-                    </div>
-                        <a href="https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0" 
-                    class="primary-btn pricing-btn">INSCREVA-SE AGORA</a>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-8">
-                <div class="ps-item">
-                    <h3>Aula Avulsa</h3>
-                    <div class="pi-price">
-                        <h2>R$ 10,00</h2>
-                    </div>
-                        <a href="https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0" 
-                    class="primary-btn pricing-btn">INSCREVA-SE AGORA</a>
-                </div>
-            </div>
+            }
         </div>
     </div>
 </section>

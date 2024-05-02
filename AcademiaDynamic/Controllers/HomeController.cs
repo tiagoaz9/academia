@@ -18,8 +18,8 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
-        //var aulas = _context.Aulas.ToList();
-        return View();
+        var aulas = _context.Aulas.ToList();
+        return View(aulas);
     }
 
     public IActionResult SobreNos()
@@ -29,12 +29,17 @@ public class HomeController : Controller
 
     public IActionResult Servicos()
     {
-        return View();
+        ServicoVM servicoVM = new() {
+            Aulas = _context.Aulas.ToList(),
+            Planos = _context.Planos.ToList()
+        };
+        return View(servicoVM);
     }
 
     public IActionResult Loja()
     {
-        return View();
+        var Loja = _context.Products.ToList();
+        return View(Loja);
     }
 
     public IActionResult Privacy()

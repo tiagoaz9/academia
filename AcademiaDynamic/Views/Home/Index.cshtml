@@ -1,4 +1,4 @@
-﻿@*model List<AcademiaDynamic.Models.Aula> *@
+﻿@model List<Aula>
 @{
     ViewData["Title"] = "Início";
 }
@@ -79,39 +79,20 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-4 col-md-6">
-                    <div class="class-item">
-                        <div class="ci-pic">
-                            <img src="~/img/classes/class-1.jpg" alt="">
-                        </div>
-                        <div class="ci-text">
-                            <span>MUSCULAÇÃO</span>
-                            <h5>LEVANTAMENTO DE PESOS</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="class-item">
-                        <div class="ci-pic">
-                            <img src="~/img/classes/class-2.jpg" alt="">
-                        </div>
-                        <div class="ci-text">
-                            <span>Funcional</span>
-                            <h5>versatilidade física</h5>
+                @foreach (var aula in Model)
+                {
+                    <div class="col-lg-4 col-md-6">
+                        <div class="class-item">
+                            <div class="ci-pic">
+                                <img src="@aula.Image" alt="">
+                            </div>
+                            <div class="ci-text">
+                                <span>@aula.Name</span>
+                                <h5>@aula.Description</h5>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="class-item">
-                        <div class="ci-pic">
-                            <img src="~/img/classes/class-3.jpg" alt="">
-                        </div>
-                        <div class="ci-text">
-                            <span>FITDANCE</span>
-                            <h5>DANÇA fitness</h5>
-                        </div>
-                    </div>
-                </div>
+                }
             </div>
         </div>
     </div>

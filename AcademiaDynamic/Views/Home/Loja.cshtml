@@ -1,3 +1,4 @@
+@model List<Product>
 @{
     ViewData["Title"] = "Loja";
 }
@@ -30,64 +31,18 @@
             </div>
         </div>
     </section>
+    
     <section class="produtos">
-        <div class="produto">
-            <img src="~/img/produtos/produto-1.png" alt="">
-            <h3 class="h3l">Creatina</h3>
-            <p class="pl">Por R$ 80,99</p>
-            <button class="comprar-btn" onclick="comprarProduto('https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0')">COMPRAR</button>
-
-        </div>
-    
-        <div class="produto">
-            <img src="~/img/produtos/produto-2.png" alt="">
-            <h3 class="h3l">Whey Protein</h3>
-            <p class="pl">Por R$ 80,99</p>
-            <button class="comprar-btn" onclick="comprarProduto('https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0')">COMPRAR</button>
-        </div>
-    
-        <div class="produto">
-            <img src="~/img/produtos/produto-3.png" alt="Hiper Calórico">
-            <h3 class="h3l">Hiper Calórico</h3>
-            <p class="pl">Por R$ 80,99</p>
-            <button class="comprar-btn" onclick="comprarProduto('https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0')">COMPRAR</button>
-        </div>
-    
-        <div class="produto">
-            <img src="~/img/produtos/produto-4.png" alt="Pré-Treino">
-            <h3 class="h3l">Pré-Treino</h3>
-            <p class="pl">Por R$ 80,99</p>
-            <button class="comprar-btn" onclick="comprarProduto('https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0')">COMPRAR</button>        </div>
-
+        @foreach (var product in Model)
+        {
+                <div class="produto">
+                    <img src="@product.Image" alt="">
+                    <h3 class="h3l">@product.Name</h3>
+                    <p class="pl">@product.Price</p>
+                    <button class="comprar-btn" onclick="comprarProduto('https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0')">COMPRAR</button>
+                </div>
+        }
     </section>
-
-    <section class="produtos">
-        <div class="produto">
-            <img src="~/img/produtos/produto-5.png" alt="camiseta">
-            <h3 class="h3l">Camiseta</h3>
-            <p class="pl">Por R$ 80,99</p>
-            <button class="comprar-btn" onclick="comprarProduto('https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0')">COMPRAR</button>        </div>
-    
-        <div class="produto">
-            <img src="~/img/produtos/produto-6.png" alt="Barra de Proteina">
-            <h3 class="h3l">Barra de Proteina</h3>
-            <p class="pl">Por R$ 80,99</p>
-            <button class="comprar-btn" onclick="comprarProduto('https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0')">COMPRAR</button>        </div>
-    
-        <div class="produto">
-            <img src="~/img/produtos/produto-7.png" alt="Glutamina">
-            <h3 class="h3l">Glutamina</h3>
-            <p class="pl">Por R$ 80,99</p>
-            <button class="comprar-btn" onclick="comprarProduto('https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0')">COMPRAR</button>        </div>
-    
-        <div class="produto">
-            <img src="~/img/produtos/produto-8.png" alt="Ômega 3">
-            <h3 class="h3l">ÔMEGA 3</h3>
-            <p class="pl">Por R$ 80,99</p>
-            <button class="comprar-btn" onclick="comprarProduto('https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0')">COMPRAR</button>        </div>
-
-    </section>
-
     <script>
         function comprarProduto(numero) {
             window.location.href = numero;
