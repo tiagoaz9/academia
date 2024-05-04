@@ -8,10 +8,10 @@ CREATE TABLE Products (
     Description TEXT,
     Price DECIMAL(10, 2) NOT NULL,
     StockQuantity INT NOT NULL,
-    Imagem VARCHAR(200) NOT NULL
+    Image VARCHAR(200) NOT NULL
 );
 
-INSERT INTO Products (Name, Description, Price, StockQuantity, Imagem) VALUES 
+INSERT INTO Products (Name, Description, Price, StockQuantity, Image) VALUES 
 ('Whey Protein', 'Proteinas', 80.90, 100, '/img/produtos/produto-1.png'),
 ('Ômega 3', 'Oléo de Peixe', 80.90, 100, '/img/produtos/produto-2.png'),
 ('Creatina Monohidratada', 'Suplemento para força', 80.90, 100, '/img/produtos/produto-3.png'),
