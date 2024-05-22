@@ -774,6 +774,62 @@ Seção Herói
 	color: #ffffff;
 }
 
+/* Seção de perguntas frequentes */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000;
+    margin: 0;
+    padding: 0;
+}
+.faq-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+.faq-question {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    border: none;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question:hover {
+    background-color: #a0e400;
+}
+
+.arrow {
+    font-size: 24px;
+}
+
+.faq-answer {
+    display: none;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-top: none;
+    background-color: #f9f9f9;
+}
+
 /*---------------------
  Seção de preços
 -----------------------*/
