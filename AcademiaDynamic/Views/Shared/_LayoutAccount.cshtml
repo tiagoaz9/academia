@@ -1,0 +1,129 @@
+<!--
+=========================================================
+* Material Dashboard 2 - v3.1.0
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/material-dashboard
+* Copyright 2023 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://www.creative-tim.com/license)
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+-->
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+    <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+    <title>
+        Academia Dynamic - @ViewData["Title"]
+    </title>
+    <!--     Fonts and icons     -->
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900|Roboto+Slab:400,700" />
+    <!-- Nucleo Icons -->
+    <link href="~/assets/css/nucleo-icons.css" rel="stylesheet" />
+    <link href="~/assets/css/nucleo-svg.css" rel="stylesheet" />
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet">
+    <!-- CSS Files -->
+    <link id="pagestyle" href="~/assets/css/material-dashboard.css" rel="stylesheet" />
+</head>
+
+<body class="bg-gray-200">
+    <div class="container position-sticky z-index-sticky top-0">
+        <div class="row">
+            <div class="col-12">
+                <!-- Navbar -->
+                <nav
+                    class="navbar navbar-expand-lg top-0 z-index-3 position-absolute my-3 py-2 start-0 end-0 mx-4 border-0">
+                    <div class="container-fluid ps-2 pe-0">
+                        <a class="navbar-brand font-weight-bolder ms-lg-0 ms-3 " asp-action="Index"
+                            asp-controller="Home">
+                            <img src="~/img/logo.png" alt="logo" width="100">
+                        </a>
+                        <button class="navbar-toggler shadow-none ms-2" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navigation" aria-controls="navigation" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon mt-2 text-white">
+                                <span class="navbar-toggler-bar bar1"></span>
+                                <span class="navbar-toggler-bar bar2"></span>
+                                <span class="navbar-toggler-bar bar3"></span>
+                            </span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navigation">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link d-flex align-items-center me-2 text-white" aria-current="page"
+                                        asp-action="Index" asp-controller="Home">
+                                        <i class="fa fa-store opacity-6 text-white me-2"></i>
+                                        Voltar a Academia
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+                <!-- End Navbar -->
+            </div>
+        </div>
+    </div>
+    <main class="main-content  mt-0">
+
+        @RenderBody()
+
+    </main>
+
+    <footer class="footer position-absolute bottom-2 py-3 w-100">
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-lg-between">
+                <div class="col mb-lg-0 mb-4">
+                    <div class="copyright text-center text-sm text-white">
+                        ©
+                        @DateTime.Now.Year,
+                        desenvolvido por <a href="https://gallojunior.github.io" class="font-weight-bold text-success"
+                            target="_blank">
+                            José Antonio Gallo Junior
+                        </a>
+                        com template de
+                        <a href="https://www.creative-tim.com" class="font-weight-bold text-success"
+                            target="_blank">Creative
+                            Tim</a>.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--   Core JS Files   -->
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/assets/js/core/popper.min.js"></script>
+    <script src="~/assets/js/core/bootstrap.min.js"></script>
+    <script src="~/assets/js/plugins/perfect-scrollbar.min.js"></script>
+    <script src="~/assets/js/plugins/smooth-scrollbar.min.js"></script>
+    <script>
+        var win = navigator.platform.indexOf('Win') > -1;
+        if (win && document.querySelector('#sidenav-scrollbar')) {
+            var options = {
+                damping: '0.5'
+            }
+            Scrollbar.init(document.querySelector('#sidenav-scrollbar'), options);
+        }
+    </script>
+    <!-- Github buttons -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
+    <script src="~/assets/js/material-dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="~/assets/js/site.js"></script>
+    <partial name="_ValidationScriptsPartial.cshtml"></partial>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+
+</html>

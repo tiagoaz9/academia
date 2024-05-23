@@ -1,2 +1,7 @@
 git config --global user.name tiagoaz9
 git config --global user.email tiago.trindade.az9@gmail.com
+
+criar o banco de dados com o script
+abrir o terminal e entrar na pasta do projeto
+executar o comando
+    dotnet ef database update
