@@ -501,7 +501,7 @@ Seção Herói
 	-o-transition: all 0.2s ease 0.2s;
 	transition: all 0.2s ease 0.2s;
 	opacity: 1;
-}
+} 
 
 .hs-slider.owl-carousel .owl-item.active .hs-item .hi-text h1 {
 	position: relative;
@@ -1258,9 +1258,11 @@ h1 {
 }
 
 .about-text .section-title {
-	text-align: left;
-	margin-bottom: 30px;
+    text-align: center;
+    margin-bottom: 20px; /* Reduz a margem inferior para mover o título para cima */
+    font-size: 36px;
 }
+
 
 .about-text .at-desc {
 	margin-bottom: 27px;
