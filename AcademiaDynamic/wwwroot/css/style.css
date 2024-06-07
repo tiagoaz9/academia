@@ -503,6 +503,13 @@ Seção Herói
 	opacity: 1;
 } 
 
+.hs-slider .hi-text .primary-btn {
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    left: 85px; /* Alterado para mover o botão mais para a esquerda */
+}
+
 .hs-slider.owl-carousel .owl-item.active .hs-item .hi-text h1 {
 	position: relative;
 	top: 0;
