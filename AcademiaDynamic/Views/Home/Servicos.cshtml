@@ -51,36 +51,6 @@
 </section>
 <!-- Fim da Seção Aulas -->
 
-<!-- Início da seção preços -->
-<section class="pricing-section spad">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-12">
-                <div class="section-title">
-                    <span>Nossos Planos</span>
-                    <h2>Escolha seu plano de preços</h2>
-                </div>
-            </div>
-        </div>
-        <div class="row justify-content-center">
-            @foreach (var plano in Model.Planos)
-            {
-            <div class="col-lg-4 col-md-8">
-                <div class="ps-item">
-                    <h3>@plano.Name</h3>
-                    <div class="pi-price">
-                        <h2>@plano.Price</h2>
-                    </div>
-
-                    <a href="https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0" target="_blank" class="primary-btn pricing-btn">INSCREVA-SE AGORA</a>
-                </div>
-            </div>
-            }
-        </div>
-    </div>
-</section>
-<!-- Fim da Seção de Preços -->
-
 <section class="services-section spad">
         <div class="container">
             <div class="row">
