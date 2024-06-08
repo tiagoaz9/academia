@@ -324,106 +324,116 @@ ol {
 -----------------------*/
 
 .header-section {
-	position: absolute;
-	left: 0;
-	top: 0;
-	width: 100%;
-	padding: 0 15px;
-	padding-top: 55px;
-	z-index: 99;
+    position: fixed; /* Mantém o cabeçalho fixo no topo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    padding: 0 15px;
+    padding-top: 15px; /* Reduzido de 55px para 15px */
+    z-index: 99;
+    background-color: #000; /* Cor de fundo para visibilidade */
 }
 
 .logo a {
-	display: inline-block;
-	width: 200px;
-    height: 100px;
-
-	position: relative;
-    top: -50px;
+    display: inline-block;
+    width: 150px; /* Reduzido de 200px para 150px */
+    height: 50px; /* Reduzido de 100px para 50px */
+    position: relative;
+    top: -30px; /* Ajustado para mover o logotipo mais para cima */
 }
 
 .nav-menu {
-	text-align: center;
+    text-align: center;
 }
 
 .nav-menu ul li {
-	list-style: none;
-	display: inline-block;
-	margin-right: 32px;
-	position: relative;
-	z-index: 1;
+    list-style: none;
+    display: inline-block;
+    margin-right: 20px; /* Reduzido de 32px para 20px */
+    position: relative;
+    z-index: 1;
 }
 
 .nav-menu ul li .dropdown {
-	position: absolute;
-	left: -30px;
-	top: 58px;
-	width: 180px;
-	background: #252525;
-	z-index: 99;
-	text-align: left;
-	padding: 13px 0 20px;
-	opacity: 0;
-	visibility: hidden;
-	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
+    position: absolute;
+    left: -30px;
+    top: 40px; /* Ajustado para nova altura */
+    width: 150px; /* Reduzido de 180px para 150px */
+    background: #252525;
+    z-index: 99;
+    text-align: left;
+    padding: 10px 0 15px; /* Ajustado para nova altura */
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
 }
 
 .nav-menu ul li .dropdown li {
-	margin-right: 0;
-	display: block;
+    margin-right: 0;
+    display: block;
 }
 
 .nav-menu ul li .dropdown li a {
-	display: block;
-	text-transform: none;
-	padding: 6px 0 6px 30px;
-	font-weight: 400;
+    display: block;
+    text-transform: none;
+    padding: 5px 0 5px 20px; /* Ajustado para nova largura */
+    font-weight: 400;
 }
 
 .nav-menu ul li .dropdown li a:after {
-	display: none;
+    display: none;
 }
 
 .nav-menu ul li:last-child {
-	margin-right: 0;
+    margin-right: 0;
 }
 
 .nav-menu ul li.active>a {
-	color: #10941b;
+    color: #10941b;
 }
 
 .nav-menu ul li.active>a:after {
-	opacity: 1;
+    opacity: 1;
 }
 
 .nav-menu ul li:hover>a {
-	color: #10941b;
+    color: #10941b;
 }
 
 .nav-menu ul li:hover>a:after {
-	opacity: 1;
+    opacity: 1;
 }
 
 .nav-menu ul li:hover .dropdown {
-	opacity: 1;
-	visibility: visible;
+    opacity: 1;
+    visibility: visible;
 }
 
 .nav-menu ul li a {
-	color: #ffffff;
-	display: block;
-	font-size: 15px;
-	font-weight: 500;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-family: "Oswald", sans-serif;
-	padding: 10px 0px;
-	position: relative;
-	-webkit-transition: all 0.3s;
-	-o-transition: all 0.3s;
-	transition: all 0.3s;
+    color: #ffffff;
+    display: block;
+    font-size: 14px; /* Reduzido de 15px para 14px */
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-family: "Oswald", sans-serif;
+    padding: 8px 0px; /* Reduzido de 10px para 8px */
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -o-transition: all 0.3s;
+    transition: all 0.3s;
+}
+
+.top-option {
+    text-align: right;
+}
+
+.to-social a {
+    color: #fff;
+    margin-left: 10px; /* Reduzido de 15px para 10px */
+    font-size: 18px; /* Reduzido de 20px para 18px */
 }
 
 /* Risco do menu */

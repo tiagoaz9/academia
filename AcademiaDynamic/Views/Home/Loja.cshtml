@@ -35,21 +35,22 @@
         </div>
     </section>
     
-    <section class="produtos">
-        @foreach (var product in Model)
-        {
-                <div class="produto">
-                    <img src="@product.Image" alt="">
-                    <h3 class="h3l">@product.Name</h3>
-                    <p class="pl">@product.Price</p>
-                    <button class="comprar-btn" onclick="comprarProduto('https://api.whatsapp.com/send/?phone=5514998948829&text&type=phone_number&app_absent=0')">COMPRAR</button>
-                </div>
-        }
-    </section>
-    <script>
-        function comprarProduto(numero) {
-            window.location.href = numero;
-        }
-    </script>
+<section class="produtos">
+    @foreach (var product in Model)
+    {
+        <div class="produto">
+            <img src="@product.Image" alt="">
+            <h3 class="h3l">@product.Name</h3>
+            <p class="pl">@product.Price</p>
+            <button class="comprar-btn" onclick="comprarProduto('https://api.whatsapp.com/send/?phone=5514998948829&text')">COMPRAR</button>
+        </div>
+    }
+</section>
+<script>
+    function comprarProduto(numero) {
+        window.open(numero, '_blank');
+    }
+</script>
+
 
 <!-- Fim da Seção de produtos -->
