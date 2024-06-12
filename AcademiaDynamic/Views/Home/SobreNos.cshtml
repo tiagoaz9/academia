@@ -209,13 +209,13 @@
         </div>
     </div>
 
-    <script>
-        document.querySelectorAll('.faq-question').forEach(button => {
-            button.addEventListener('click', () => {
-                const answer = button.nextElementSibling;
-                const arrow = button.querySelector('.arrow');
-                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
-                arrow.textContent = arrow.textContent === '▼' ? '▲' : '▼';
-            });
+<script>
+    document.querySelectorAll('.faq-question').forEach(button => {
+        button.addEventListener('click', () => {
+            const answer = button.nextElementSibling;
+            const arrow = button.querySelector('.arrow');
+            answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            arrow.textContent = arrow.textContent === '▼' ? '▲' : '▼';
         });
-    </script>
+    });
+</script>
