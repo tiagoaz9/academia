@@ -8,3 +8,5 @@ executar o comando
 
     admin@dynamic.com
     @Dynamic123
+
+dotnet-aspnet-codegenerator controller -name PlanosController -m Plano -dc AppDbContext -l "~/Views/Shared/_LayoutAdmin.cshtml" -outDir Controllers

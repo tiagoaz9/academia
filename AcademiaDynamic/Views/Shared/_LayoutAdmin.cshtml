@@ -74,8 +74,8 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class='nav-link text-white @(ViewData["Title"].ToString() == "Categorias" ? "active bg-gradient-success" : "")'
-            asp-controller="Categorias" asp-action="Index">
+          <a class='nav-link text-white @(ViewData["Title"].ToString() == "Planos" ? "active bg-gradient-success" : "")'
+            asp-controller="Planos" asp-action="Index">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">category</i>
             </div>
@@ -83,12 +83,12 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class='nav-link text-white @(ViewData["Title"].ToString() == "Cores" ? "active bg-gradient-success" : "")'
-            asp-controller="Cores" asp-action="Index">
+          <a class='nav-link text-white @(ViewData["Title"].ToString() == "Aulas" ? "active bg-gradient-success" : "")'
+            asp-controller="Aulas" asp-action="Index">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">palette</i>
             </div>
-            <span class="nav-link-text ms-1">Serviços</span>
+            <span class="nav-link-text ms-1">Aulas</span>
           </a>
         </li>
 
@@ -153,10 +153,7 @@
             <div class="copyright text-center text-sm text-muted">
               ©
               @DateTime.Now.Year,
-              desenvolvido por <a href="https://gallojunior.github.io" class="font-weight-bold" target="_blank">
-                José Antonio Gallo Junior
-              </a>
-              com template de
+              desenvolvido por <span class="font-weight-bold text-dark">Rennan, Tiago e Willian</span> com template de
               <a href="https://www.creative-tim.com" class="font-weight-bold" target="_blank">Creative Tim</a>.
             </div>
           </div>

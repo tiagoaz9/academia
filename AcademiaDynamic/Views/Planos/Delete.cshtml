@@ -1,0 +1,43 @@
+@model AcademiaDynamic.Models.Plano
+@{
+    ViewData["Title"] = "Planos";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<div class="row">
+    <div class="col">
+        <div class="card my-4">
+            <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
+                <div class="bg-gradient-success shadow-dark border-radius-lg pt-4 pb-3">
+                    <h5 class="text-white text-capitalize ps-3 mb-0">@ViewData["Title"]</h5>
+                    <h6 class="text-white text-capitalize ps-3">Excluir</h6>
+                </div>
+            </div>
+            <div class="card-body pb-2">
+                <div class="row">
+                    <div class="col-12 mb-3">
+                        <div class="input-group input-group-outline">
+                            <label asp-for="Name" class="form-label"></label>
+                            <input asp-for="Name" class="form-control" readonly />
+                        </div>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <div class="input-group input-group-outline">
+                            <label asp-for="Price" class="form-label"></label>
+                            <input asp-for="Price" class="form-control" readonly />
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <form asp-action="Delete">
+                            <h5 class="text-danger">Confirma a exclusão desta Categoria?</h5>
+                            <input type="hidden" asp-for="Id" />
+                            <input type="submit" value="Excluir" class="btn btn-danger me-2" />
+                            <a asp-action="Index" class="btn btn-info">Voltar</a>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
