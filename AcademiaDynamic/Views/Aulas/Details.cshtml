@@ -1,7 +1,6 @@
-@model AcademiaDynamic.Models.Product
-
+@model AcademiaDynamic.Models.Aula
 @{
-    ViewData["Title"] = "Produtos";
+    ViewData["Title"] = "Aulas";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
@@ -13,8 +12,8 @@
                     <h5 class="text-white text-capitalize ps-3 mb-0">@ViewData["Title"]</h5>
                     <h6 class="text-white text-capitalize ps-3">Detalhes</h6>
                 </div>
-                </div>
-                <div class="card-body pb-2">
+            </div>
+            <div class="card-body pb-2">
                 <div class="row">
                     <div class="col-12 mb-3">
                         <div class="input-group input-group-outline mb-1">
@@ -24,16 +23,9 @@
                     </div>
                     <div class="col-12 mb-3">
                         <div class="input-group input-group-outline mb-1">
-                            <label asp-for="StockQuantity" class="form-label"></label>
-                            <input asp-for="StockQuantity" class="form-control" readonly/>
+                            <label asp-for="Description" class="form-label"></label>
+                            <input asp-for="Description" class="form-control" readonly/>
                         </div>
-                    </div>
-                    <div class="col-12 mb-3">
-                        <div class="input-group input-group-outline mb-1">
-                            <label asp-for="Price" class="form-label"></label>
-                            <input asp-for="Price" class="form-control" readonly/>
-                        </div>
-                    </div>
                     </div>
                     <div class="mb-3">
                         <a asp-action="Edit" asp-route-id="@Model.Id"

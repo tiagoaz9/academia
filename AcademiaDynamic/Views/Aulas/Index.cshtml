@@ -1,6 +1,6 @@
-@model IEnumerable<AcademiaDynamic.Models.Product>
+@model IEnumerable<AcademiaDynamic.Models.Aula>
 @{
-    ViewData["Title"] = "Produtos";
+    ViewData["Title"] = "Aulas";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
@@ -25,11 +25,8 @@
                                     Nome
                                 </th>
                                 <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
-                                    Estoque
-                                </th>                                 
-                                <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
-                                    Preço
-                                </th>                                                                                                
+                                    Descrição
+                                </th>
                                 <th class="text-uppercase text-secondary text-xs font-weight-bolder opacity-7">
                                     Ações
                                 </th>
@@ -43,11 +40,8 @@
                                         @Html.DisplayFor(modelItem => item.Name)
                                     </td>
                                     <td class="text-dark text-sm">
-                                        @Html.DisplayFor(modelItem => item.StockQuantity)
-                                    </td>                                      
-                                    <td class="text-dark text-sm">
-                                        @Html.DisplayFor(modelItem => item.Price)
-                                    </td>                                                                                                       
+                                        @Html.DisplayFor(modelItem => item.Description)
+                                    </td>
                                     <td>
                                         <a asp-action="Edit" asp-route-id="@item.Id" title="Alterar">
                                             <i class="material-icons me-2">edit</i>
@@ -87,5 +81,3 @@
         });
     </script>
 }
-
-

@@ -1,12 +1,10 @@
-@model AcademiaDynamic.Models.Product
-
+@model AcademiaDynamic.Models.Aula
 @{
-    ViewData["Title"] = "Produtos";
+    ViewData["Title"] = "Aulas";
     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
 }
 
-<div>
-    <div class="row">
+<div class="row">
     <div class="col">
         <div class="card my-4">
             <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
@@ -27,23 +25,17 @@
                     </div>
                     <div class="col-12 mb-3">
                         <div class="input-group input-group-outline">
-                            <label asp-for="StockQuantity" class="form-label"></label>
-                            <input asp-for="StockQuantity" class="form-control" />
+                            <label asp-for="Description" class="form-label"></label>
+                            <input asp-for="Description" class="form-control" />
                         </div>
-                        <span asp-validation-for="StockQuantity" class="text-danger text-sm"></span>
-                    </div>  
-                    <div class="col-12 mb-3">
-                        <div class="input-group input-group-outline">
-                            <label asp-for="Price" class="form-label"></label>
-                            <input asp-for="Price" class="form-control" />
-                        </div>
-                        <span asp-validation-for="Price" class="text-danger text-sm"></span>
-                    </div>                  
+                        <span asp-validation-for="Description" class="text-danger text-sm"></span>
+                    </div>
                     <div class="mb-3">
                         <input type="submit" value="Salvar" class="btn btn-success me-3" />
                         <a asp-action="Index" class="btn btn-danger">Cancelar</a>
                     </div>
                 </form>
+
             </div>
         </div>
     </div>

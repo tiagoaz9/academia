@@ -25,24 +25,24 @@
                     </div>
                     <div class="col-12 mb-3">
                         <div class="input-group input-group-outline">
-                            <label asp-for="Price" class="form-label"></label>
-                            <input asp-for="Price" class="form-control" />
-                        </div>
-                        <span asp-validation-for="Price" class="text-danger text-sm"></span>
-                    </div>
-                    <div class="col-12 mb-3">
-                        <div class="input-group input-group-outline">
                             <label asp-for="StockQuantity" class="form-label"></label>
                             <input asp-for="StockQuantity" class="form-control" />
                         </div>
                         <span asp-validation-for="StockQuantity" class="text-danger text-sm"></span>
+                    </div>
+                    <div class="col-12 mb-3">
+                        <div class="input-group input-group-outline">
+                            <label asp-for="Price" class="form-label"></label>
+                            <input asp-for="Price" class="form-control" />
+                        </div>
+                        <span asp-validation-for="Price" class="text-danger text-sm"></span>
                     </div>
                     <div class="mb-3">
                         <input type="submit" value="Salvar" class="btn btn-success me-3" />
                         <a asp-action="Index" class="btn btn-danger">Cancelar</a>
                     </div>
                 </form>
-
+                </div>
             </div>
         </div>
     </div>
