@@ -27,6 +27,7 @@
                             <input asp-for="Description" class="form-control" readonly/>
                         </div>
                     </div>
+                    <img id="Preview" src="@Model.Image" alt="" class="img-fluid w-100">
                     <div class="mb-3">
                         <a asp-action="Edit" asp-route-id="@Model.Id"
                             class="btn btn-warning me-2">Alterar</a>

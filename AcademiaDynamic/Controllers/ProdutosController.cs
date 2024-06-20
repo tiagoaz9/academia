@@ -7,16 +7,21 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AcademiaDynamic.Data;
 using AcademiaDynamic.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AcademiaDynamic.Controllers
 {
+
+    [Authorize(Roles = "Administrador")]   
     public class ProdutosController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly IWebHostEnvironment _webHost;
 
-        public ProdutosController(AppDbContext context)
+        public ProdutosController(AppDbContext context, IWebHostEnvironment webHost)
         {
             _context = context;
+            _webHost = webHost;
         }
 
         // GET: Produto
@@ -54,12 +59,27 @@ namespace AcademiaDynamic.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,Price,StockQuantity,Image")] Product product)
+        public async Task<IActionResult> Create([Bind("Id,Name,Description,Price,StockQuantity,Image")] Product product, IFormFile arquivo)
         {
             if (ModelState.IsValid)
             {
+                product.Image = "...";
                 _context.Add(product);
                 await _context.SaveChangesAsync();
+
+                if (arquivo != null)
+                {
+                    string nomeArquivo = product.Id + Path.GetExtension(arquivo.FileName);
+                    string caminho = Path.Combine(_webHost.WebRootPath, "img\\produtos");
+                    string novoArquivo = Path.Combine(caminho, nomeArquivo);
+                    using (var stream = new FileStream(novoArquivo, FileMode.Create))
+                    {
+                        arquivo.CopyTo(stream);
+                    }
+                    product.Image = "\\img\\produtos\\" + nomeArquivo;
+                    await _context.SaveChangesAsync();
+                }
+
                 return RedirectToAction(nameof(Index));
             }
             return View(product);
@@ -86,7 +106,7 @@ namespace AcademiaDynamic.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Price,StockQuantity,Image")] Product product)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Price,StockQuantity,Image")] Product product, IFormFile arquivo)
         {
             if (id != product.Id)
             {
@@ -97,6 +117,17 @@ namespace AcademiaDynamic.Controllers
             {
                 try
                 {
+                    if (arquivo != null)
+                    {
+                        string nomeArquivo = product.Id + Path.GetExtension(arquivo.FileName);
+                        string caminho = Path.Combine(_webHost.WebRootPath, "img\\produtos");
+                        string novoArquivo = Path.Combine(caminho, nomeArquivo);
+                        using (var stream = new FileStream(novoArquivo, FileMode.Create))
+                        {
+                            arquivo.CopyTo(stream);
+                        }
+                        product.Image = "\\img\\produtos\\" + nomeArquivo;
+                    }
                     _context.Update(product);
                     await _context.SaveChangesAsync();
                 }

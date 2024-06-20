@@ -7,9 +7,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AcademiaDynamic.Data;
 using AcademiaDynamic.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AcademiaDynamic.Controllers
 {
+    [Authorize(Roles = "Administrador")]
     public class PlanosController : Controller
     {
         private readonly AppDbContext _context;

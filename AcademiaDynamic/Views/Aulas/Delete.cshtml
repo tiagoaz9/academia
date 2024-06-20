@@ -27,16 +27,17 @@
                             <input asp-for="Description" class="form-control" readonly />
                         </div>
                     </div>
+                     <img id="Preview" src="@Model.Image" alt="" class="img-fluid w-100">
                     <div class="mb-3">
                         <form asp-action="Delete">
                             <h5 class="text-danger">Confirma a exclusão desta Categoria?</h5>
                             <input type="hidden" asp-for="Id" />
                             <input type="submit" value="Excluir" class="btn btn-danger me-2" />
                             <a asp-action="Index" class="btn btn-info">Voltar</a>
-                        </form>
+                        </form> 
                     </div>
-                </div>
-
+                    </div>
+                </div>    
             </div>
         </div>
     </div>

@@ -7,16 +7,20 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using AcademiaDynamic.Data;
 using AcademiaDynamic.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace AcademiaDynamic.Controllers
-{
+{   
+    [Authorize(Roles = "Administrador")]
     public class AulasController : Controller
     {
         private readonly AppDbContext _context;
+        private readonly IWebHostEnvironment _webHost;
 
-        public AulasController(AppDbContext context)
+        public AulasController(AppDbContext context, IWebHostEnvironment webHost)
         {
             _context = context;
+            _webHost = webHost;
         }
 
         // GET: Aulas
@@ -54,14 +58,26 @@ namespace AcademiaDynamic.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Id,Name,Description,Image")] Aula aula)
+        public async Task<IActionResult> Create([Bind("Id,Name,Description,Image")] Aula aula, IFormFile arquivo)
         {
-            if (ModelState.IsValid)
-            {
-                _context.Add(aula);
+
+                 aula.Image = "...";
+               _context.Add(aula);
                 await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
-            }
+
+                if (arquivo != null)
+                {
+                    string nomeArquivo = aula.Id + Path.GetExtension(arquivo.FileName);
+                    string caminho = Path.Combine(_webHost.WebRootPath, "img\\services");
+                    string novoArquivo = Path.Combine(caminho, nomeArquivo);
+                    using (var stream = new FileStream(novoArquivo, FileMode.Create))
+                    {
+                        arquivo.CopyTo(stream);
+                    }
+                    aula.Image = "\\img\\services\\" + nomeArquivo;
+                    await _context.SaveChangesAsync();
+                }
+
             return View(aula);
         }
 
@@ -86,7 +102,8 @@ namespace AcademiaDynamic.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Image")] Aula aula)
+        public async Task<IActionResult> Edit(int id, [Bind("Id,Name,Description,Image")] Aula aula , IFormFile arquivo)
+
         {
             if (id != aula.Id)
             {
@@ -97,9 +114,28 @@ namespace AcademiaDynamic.Controllers
             {
                 try
                 {
+                    if (arquivo != null)
+                    {
+                        string nomeArquivo = aula.Id + Path.GetExtension(arquivo.FileName);
+                        string caminho = Path.Combine(_webHost.WebRootPath, "img\\services");
+                        string novoArquivo = Path.Combine(caminho, nomeArquivo);
+                        using (var stream = new FileStream(novoArquivo, FileMode.Create))
+                        {
+                            arquivo.CopyTo(stream);
+                        }
+                        aula.Image = "\\img\\services\\" + nomeArquivo;
+                    }
                     _context.Update(aula);
                     await _context.SaveChangesAsync();
+
+                    {
+                    _context.Update(aula);
+                    await _context.SaveChangesAsync();
+
+                    }
+
                 }
+
                 catch (DbUpdateConcurrencyException)
                 {
                     if (!AulaExists(aula.Id))
